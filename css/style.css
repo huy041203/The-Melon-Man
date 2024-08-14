@@ -1,12 +1,11 @@
-
 @font-face {
-    font-family: 'superscript';
-    src:url('../font/superscript.ttf.woff') format('woff'),
-        url('../font/superscript.ttf.svg#superscript') format('svg'),
-        url('../font/superscript.ttf.eot'),
-        url('../font/superscript.ttf.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "superscript";
+  src: url("../font/superscript.ttf.woff") format("woff"),
+    url("../font/superscript.ttf.svg#superscript") format("svg"),
+    url("../font/superscript.ttf.eot"),
+    url("../font/superscript.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,
@@ -39,9 +38,18 @@ canvas {
 }
 
 .counter {
-  font-family: 'superscript', Arial, sans-serif;
+  font-family: "superscript", Arial, sans-serif;
   font-size: 22px;
-  color: black;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  z-index: 2;
+}
+.tutorial {
+  font-family: "superscript", Arial, sans-serif;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0;
   right: 20px;
@@ -62,7 +70,7 @@ canvas {
 }
 
 .mobileControls__button {
-  font-family: 'superscript', Arial, sans-serif;
+  font-family: "superscript", Arial, sans-serif;
   width: 60px;
   height: 60px;
   background: #ff4623;
