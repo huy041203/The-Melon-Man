@@ -3,7 +3,10 @@ var game = {
 	canvas: document.getElementById('canvas'),
 	context: this.canvas.getContext('2d', {alpha: false}),
 	counter: document.getElementById('counter'),
-	textures: new Image(),
+	textures: {
+		player: new Image(),
+		map: new Image(),
+	},
 	drawPending: false,
 	backgrounds: {
 			'sky': {
@@ -20,8 +23,11 @@ var game = {
 	},
 	options: {
 		texturesPath: "textures.png",
+		playerPath: "player.png",
 		tileWidth: 24,
 		tileHeight: 24,
+		playerWidth:64,
+		playerHeight:64,
 		canvasWidth: window.innerWidth / 3,
 		canvasHeight: window.innerHeight / 3
 	},
@@ -40,8 +46,10 @@ var game = {
 			}.bind(this, key)
 		}
 
-		this.textures.src = this.options.texturesPath
-		this.textures.onload = onInit
+		this.textures.map.src = this.options.texturesPath
+		this.textures.map.onload = onInit
+		this.textures.player.src = this.options.playerPath
+		this.textures.player.onload = onInit
 	},
 	map: {
 		structures: []

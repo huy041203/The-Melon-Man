@@ -2,7 +2,7 @@
 
 game.drawTile = function (tileColumn, tileRow, x, y) {
 	game.context.drawImage(
-		game.textures,
+		game.textures.map,
 		tileColumn * game.options.tileWidth,
 		tileRow * game.options.tileHeight,
 		game.options.tileWidth,
@@ -24,15 +24,15 @@ game.drawStructure = function (name, x, y) {
 game.drawPlayer = function () {
 	actualPlayerTile = game.player.animations[game.player.direction][game.player.animationFrameNumber % 4]
 	game.context.drawImage(
-		game.textures,
-		actualPlayerTile.tileColumn * game.options.tileWidth,
-		actualPlayerTile.tileRow * game.options.tileHeight,
-		game.options.tileWidth,
-		game.options.tileHeight,
-		Math.round(game.options.canvasWidth / 2 - game.options.tileWidth / 2),
-		Math.round(game.options.canvasHeight / 2 - game.options.tileHeight / 2),
-		game.options.tileWidth,
-		game.options.tileHeight
+		game.textures.player,
+		actualPlayerTile.tileColumn * game.options.playerWidth,
+		actualPlayerTile.tileRow * game.options.playerHeight,
+		game.options.playerWidth,
+		game.options.playerHeight,
+		Math.round(game.options.canvasWidth / 2 - game.options.playerWidth / 2),
+		Math.round(game.options.canvasHeight / 2 - game.options.playerHeight / 2),
+		game.options.playerWidth,
+		game.options.playerHeight
 	)
 }
 
